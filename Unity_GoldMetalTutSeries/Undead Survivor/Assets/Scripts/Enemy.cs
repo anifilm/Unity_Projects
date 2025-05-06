@@ -53,4 +53,28 @@ public class Enemy : MonoBehaviour
 
         sprite.flipX = target.position.x < rigid.position.x;
     }
+
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Bullet")) return;
+
+        Bullet bullet = collision.GetComponent<Bullet>();
+        health -= bullet.damage;
+
+        if (health > 0)
+        {
+            isLive = true;
+        }
+        else
+        {
+            isLive = false;
+            Dead();
+        }
+    }
+
+    void Dead()
+    {
+        gameObject.SetActive(false);
+    }
 }

@@ -9251,6 +9251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 2331465020329922357, guid: 0f84acaebb98447c3be97f9eb38eabce, type: 3}
+  - {fileID: 6850098010091061354, guid: e7c9b5c6841ce4fa1aff214bd88e0367, type: 3}
 --- !u!1 &1410340413
 GameObject:
   m_ObjectHideFlags: 0
@@ -17887,6 +17888,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3612167918737486072, guid: add630374a1a341198ad493229a49a5a, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5645249744161242783, guid: add630374a1a341198ad493229a49a5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -17930,54 +17935,6 @@ PrefabInstance:
     - target: {fileID: 5690083559923070466, guid: add630374a1a341198ad493229a49a5a, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[0].speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[1].speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[2].speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[0].health
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[1].health
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[2].health
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[0].spawnTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[1].spawnTime
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[2].spawnTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[1].spriteType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6187816047649335264, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: spawnDatas.Array.data[2].spriteType
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
