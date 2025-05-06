@@ -9252,6 +9252,7 @@ MonoBehaviour:
   prefabs:
   - {fileID: 2331465020329922357, guid: 0f84acaebb98447c3be97f9eb38eabce, type: 3}
   - {fileID: 6850098010091061354, guid: e7c9b5c6841ce4fa1aff214bd88e0367, type: 3}
+  - {fileID: 1196193152462131368, guid: 4ff9a1ad4b0f348b3a81dc21af9d3090, type: 3}
 --- !u!1 &1410340413
 GameObject:
   m_ObjectHideFlags: 0
@@ -17888,10 +17889,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3612167918737486072, guid: add630374a1a341198ad493229a49a5a, type: 3}
-      propertyPath: damage
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5645249744161242783, guid: add630374a1a341198ad493229a49a5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
