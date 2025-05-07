@@ -1,3 +1,4 @@
+._*
 /Temp/
 /Library/
 /obj/
@@ -16,6 +17,3 @@
 *.sln
 /ProjectSettings/
 /UserSettings/
-/_Layout_/
-/builtin_shaders-2021.3.39f1/
-.DS_Store
