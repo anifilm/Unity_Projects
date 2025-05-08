@@ -643,6 +643,7 @@ MonoBehaviour:
     spriteType: 4
     health: 50
     speed: 0
+  gameLevel: 0
 --- !u!1 &4373775331456063799
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,10 +742,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7226875165144927632}
+  - {fileID: 3881470104404957231}
   - {fileID: 2168655952805632424}
   - {fileID: 857273068973058809}
-  - {fileID: 3881470104404957231}
-  - {fileID: 7226875165144927632}
   - {fileID: 1047802889466749969}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

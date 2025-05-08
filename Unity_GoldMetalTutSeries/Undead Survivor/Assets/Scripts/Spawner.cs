@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
     public Transform[] spawnPoints;
     public SpawnData[] spawnDatas;
 
-    int gameLevel;
+    public int gameLevel;
     float spawnTime;
 
     void Awake()
@@ -17,8 +17,10 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.instance.isLive) return;
+
         spawnTime += Time.deltaTime;
-        gameLevel = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f), spawnDatas.Length - 1);
+        gameLevel = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 60f), spawnDatas.Length - 1);
 
         if (spawnTime > spawnDatas[gameLevel].spawnTime)
         {

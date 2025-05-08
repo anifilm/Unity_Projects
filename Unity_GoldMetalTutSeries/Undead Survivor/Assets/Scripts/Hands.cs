@@ -24,6 +24,8 @@ public class Hands : MonoBehaviour
 
     void LateUpdate()
     {
+        if (!GameManager.instance.isLive) return;
+
         if (playerSprite.flipX)
         {
             // 플레이어가 왼쪽으로 이동시

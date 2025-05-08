@@ -18,6 +18,7 @@ public class ItemData : ScriptableObject
     public ItemType itemType;
     public int itemId;
     public string itemName;
+    [TextArea(2, 10)]
     public string itemDescription;
     public Sprite itemIcon;
 

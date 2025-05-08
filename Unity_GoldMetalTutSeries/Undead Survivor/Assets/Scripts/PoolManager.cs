@@ -16,7 +16,7 @@ public class PoolManager : MonoBehaviour
             pools[i] = new List<GameObject>();
         }
 
-        Debug.Log("PoolManager initialized with " + pools.Length + " pools.");
+        //Debug.Log("PoolManager initialized with " + pools.Length + " pools.");
     }
 
     public GameObject GetObject(int index)

@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.instance.isLive) return;
+
         // 인풋 시스템 변경으로 주석 처리
         //inputVec.x = Input.GetAxis("Horizontal");
         //inputVec.y = Input.GetAxis("Vertical");
@@ -33,6 +35,8 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!GameManager.instance.isLive) return;
+
         // 1. 힘을 준다
         //rigid.AddForce(inputVec);
         // 2. 속도 제어
@@ -44,6 +48,8 @@ public class Player : MonoBehaviour
 
     void LateUpdate()
     {
+        if (!GameManager.instance.isLive) return;
+
         animator.SetFloat("Speed", inputVec.magnitude);
 
         if (inputVec.x > 0)
@@ -55,5 +61,24 @@ public class Player : MonoBehaviour
     void OnMove(InputValue value)
     {
         inputVec = value.Get<Vector2>();
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (!GameManager.instance.isLive) return;
+
+        GameManager.instance.health -= 10 * Time.deltaTime;
+
+        if (GameManager.instance.health <= 0)
+        {
+            for (int i = 2; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(false);
+            }
+            animator.SetTrigger("Dead");
+            sprite.sortingOrder = 1;
+
+            GameManager.instance.GameOver();
+        }
     }
 }

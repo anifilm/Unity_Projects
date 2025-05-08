@@ -48,6 +48,7 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!GameManager.instance.isLive) return;
         if (!isLive || animator.GetCurrentAnimatorStateInfo(0).IsName("Hit")) return;
 
         Vector2 dirVector = target.position - rigid.position;
@@ -58,6 +59,7 @@ public class Enemy : MonoBehaviour
 
     void LateUpdate()
     {
+        if (!GameManager.instance.isLive) return;
         if (!isLive || animator.GetCurrentAnimatorStateInfo(0).IsName("Hit")) return;
 
         sprite.flipX = target.position.x < rigid.position.x;
@@ -95,7 +97,7 @@ public class Enemy : MonoBehaviour
         rigid.AddForce(dirVector.normalized * 3f, ForceMode2D.Impulse);
     }
 
-    void Dead()
+    void Dead() // 애니메이션에서 Dead 이벤트로 호출
     {
         gameObject.SetActive(false);
     }
