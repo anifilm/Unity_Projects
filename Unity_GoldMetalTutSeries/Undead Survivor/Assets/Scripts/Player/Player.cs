@@ -9,11 +9,11 @@ public class Player : MonoBehaviour
     public float speed;
     public Scanner scanner;
     public Hands[] hands;
+    public RuntimeAnimatorController[] animatorControllers;
 
     Rigidbody2D rigid;
     SpriteRenderer sprite;
     Animator animator;
-
 
     void Awake()
     {
@@ -22,6 +22,14 @@ public class Player : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         hands = GetComponentsInChildren<Hands>(true);
+    }
+
+    void OnEnable()
+    {
+        if (!GameManager.instance) return;
+
+        animator.runtimeAnimatorController = animatorControllers[GameManager.instance.playerId % 2];
+        speed *= Character.Speed;
     }
 
     void Update()

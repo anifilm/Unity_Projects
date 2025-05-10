@@ -19,7 +19,7 @@ MonoBehaviour:
     \uC99D\uAC00"
   itemIcon: {fileID: -205726582, guid: d71a3dc7aa20fad4f9a99fc76a9254ba, type: 3}
   baseDamage: 3
-  baseCount: 0
+  baseCount: 1
   damages:
   - 0.3
   - 0.6

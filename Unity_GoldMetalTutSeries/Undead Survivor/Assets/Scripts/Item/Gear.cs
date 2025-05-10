@@ -43,13 +43,16 @@ public class Gear : MonoBehaviour
         Weapon[] weapons = transform.parent.GetComponentsInChildren<Weapon>();
         foreach (Weapon weapon in weapons)
         {
+            float speed;
             switch (weapon.id)
             {
                 case 0:
-                    weapon.speed = 150 + (150 * rate);
+                    speed = 150 * Character.WeaponSpeed;
+                    weapon.speed = speed + (speed * rate);
                     break;
                 default:
-                    weapon.speed = 1f - (1f * rate);
+                    speed = 1f * Character.WeaponRate;
+                    weapon.speed = speed * (1f - rate);
                     break;
             }
         }
@@ -57,7 +60,7 @@ public class Gear : MonoBehaviour
 
     void SpeedUp()
     {
-        float speed = 3f;
+        float speed = 3f * Character.Speed;
         GameManager.instance.player.speed = speed + (speed * rate);
     }
 }

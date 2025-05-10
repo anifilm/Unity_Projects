@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public bool isLive;
 
     [Header("Player Info")]
+    public int playerId;
     public float health = 0;
     public float maxHealth = 100;
     public int level = 1;
@@ -32,12 +33,13 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    public void GameStart()
+    public void GameStart(int id)
     {
+        playerId = id;
         health = maxHealth;
-        isLive = true;
-        Time.timeScale = 1f;
-        levelUpUI.Select(0);
+        player.gameObject.SetActive(true);
+        levelUpUI.Select(playerId % 2);
+        Resume();
     }
 
     public void GameOver()

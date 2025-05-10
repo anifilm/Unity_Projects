@@ -909,6 +909,11 @@ MonoBehaviour:
   speed: 3
   scanner: {fileID: 0}
   hands: []
+  animatorControllers:
+  - {fileID: 9100000, guid: 92c1bd50d0670427eb624bd75ecb6240, type: 2}
+  - {fileID: 22100000, guid: c2afa04c5143d497aa86860e04bd0628, type: 2}
+  - {fileID: 22100000, guid: 591c3fac6b55043a29bca65b5d2a51a0, type: 2}
+  - {fileID: 22100000, guid: 5a4c20ffad55c4133b240521e2bbee66, type: 2}
 --- !u!114 &3112211079565890999
 MonoBehaviour:
   m_ObjectHideFlags: 0
