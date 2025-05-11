@@ -90,4 +90,14 @@ public class AudioManager : MonoBehaviour
             break;
         }
     }
+
+    public void PlaySfxSelect()
+    {
+        PlaySfx(Sfx.LevelUp);
+    }
+
+    public void PlaySfxRetry()
+    {
+        PlaySfx(Sfx.Select);
+    }
 }

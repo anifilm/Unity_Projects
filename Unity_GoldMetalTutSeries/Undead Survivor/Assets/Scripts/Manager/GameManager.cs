@@ -26,11 +26,13 @@ public class GameManager : MonoBehaviour
     public Player player;
     public LevelUp levelUpUI;
     public Result resultUI;
+    public Transform joystickUI;
     public GameObject enemyCleaner;
 
     void Awake()
     {
         instance = this;
+        Application.targetFrameRate = 60;
     }
 
     public void GameStart(int id)
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
         playerId = id;
         health = maxHealth;
         player.gameObject.SetActive(true);
-        levelUpUI.Select(playerId % 4);
+        levelUpUI.Select(playerId % 2);
         Resume();
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         AudioManager.instance.PlayBgm(true);
@@ -55,6 +57,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         resultUI.gameObject.SetActive(true);
         resultUI.Lose();
+        joystickUI.localScale = Vector3.zero;
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Lose);
         yield return new WaitForSeconds(0.5f);
         AudioManager.instance.PlayBgm(false);
@@ -73,6 +76,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         resultUI.gameObject.SetActive(true);
         resultUI.Win();
+        joystickUI.localScale = Vector3.zero;
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Win);
         yield return new WaitForSeconds(0.5f);
         AudioManager.instance.PlayBgm(false);
@@ -82,6 +86,11 @@ public class GameManager : MonoBehaviour
     public void GameRetry()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void GameQuit()
+    {
+        Application.Quit();
     }
 
     void Update()
@@ -118,11 +127,13 @@ public class GameManager : MonoBehaviour
     {
         isLive = false;
         Time.timeScale = 0f;
+        joystickUI.localScale = Vector3.zero;
     }
 
     public void Resume()
     {
         isLive = true;
         Time.timeScale = 1f;
+        joystickUI.localScale = Vector3.one;
     }
 }
