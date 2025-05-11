@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         playerId = id;
         health = maxHealth;
         player.gameObject.SetActive(true);
-        levelUpUI.Select(playerId % 2);
+        levelUpUI.Select(playerId % 4);
         Resume();
     }
 

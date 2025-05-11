@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     {
         if (!GameManager.instance) return;
 
-        animator.runtimeAnimatorController = animatorControllers[GameManager.instance.playerId % 2];
+        animator.runtimeAnimatorController = animatorControllers[GameManager.instance.playerId % 4];
         speed *= Character.Speed;
     }
 
