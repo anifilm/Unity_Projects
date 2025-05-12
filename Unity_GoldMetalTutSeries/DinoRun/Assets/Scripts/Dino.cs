@@ -25,15 +25,19 @@ public class Dino : MonoBehaviour
 
     void Update()
     {
-        if (isGround && Input.GetButtonDown("Jump"))
+        if (GameManager.instance.isLive == false) return;
+
+        if (isGround && (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0)))
         {
             isJump = true;
             rigid.AddForce(Vector2.up * startJumpForce, ForceMode2D.Impulse);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Jump);
         }
-        else if (!isGround && isJump && Input.GetButtonDown("Jump"))
+        else if (!isGround && isJump && (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0)))
         {
             isJump = false;
             rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Jump);
         }
     }
 
@@ -47,12 +51,15 @@ public class Dino : MonoBehaviour
     {
         isGround = true;
         ChangeAnimation(DinoState.Run);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Land);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         rigid.simulated = false;
         ChangeAnimation(DinoState.Hit);
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
+        GameManager.instance.GameOver();
     }
 
     void ChangeAnimation(DinoState state)

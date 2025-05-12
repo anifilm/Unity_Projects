@@ -5,7 +5,7 @@ using UnityEngine;
 public class Scroller : MonoBehaviour
 {
     public int count;
-    public float scrollSpeed = 1f;
+    public float scrollRate;
 
     void Start()
     {
@@ -14,6 +14,9 @@ public class Scroller : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.left * scrollSpeed * Time.deltaTime);
+        if (GameManager.instance.isLive == false) return;
+
+        float totalSpeed = GameManager.instance.globalSpeed * scrollRate;
+        transform.Translate(Vector3.left * totalSpeed * Time.deltaTime);
     }
 }
