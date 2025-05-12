@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Helloworld : MonoBehaviour
+public class Dino : MonoBehaviour
 {
     void Start()
     {
