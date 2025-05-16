@@ -55,16 +55,19 @@ public class Player : MonoBehaviour
         if (isJumping)
         {
             ChangeAnimation(PlayerState.FirstJumping);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Jump);
         }
         else
         {
             ChangeAnimation(PlayerState.SecondJumping);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Jump);
         }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         isGround = false;
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -73,6 +76,7 @@ public class Player : MonoBehaviour
         {
             isGround = true;
             ChangeAnimation(PlayerState.Running);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Land);
         }
     }
 
@@ -82,17 +86,20 @@ public class Player : MonoBehaviour
         {
             if (!isInvincible)
             {
+                AudioManager.instance.PlaySfx(AudioManager.Sfx.Hit);
                 Hit();
             }
         }
         else if (collider.CompareTag("Food"))
         {
             Destroy(collider.gameObject);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Heal);
             Heal();
         }
         else if (collider.CompareTag("Gold"))
         {
             Destroy(collider.gameObject);
+            AudioManager.instance.PlaySfx(AudioManager.Sfx.Gold);
             StartInvincible(6f);
         }
     }
@@ -105,6 +112,7 @@ public class Player : MonoBehaviour
     void Hit()
     {
         GameManager.instance.lives -= 1;
+
         if (GameManager.instance.lives <= 0)
         {
             Dead();
