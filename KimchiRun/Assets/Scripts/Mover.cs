@@ -7,6 +7,6 @@ public class Mover : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.left * (moveSpeed * GameManager.instance.CalculateGameSpeed()) * Time.deltaTime);
     }
 }

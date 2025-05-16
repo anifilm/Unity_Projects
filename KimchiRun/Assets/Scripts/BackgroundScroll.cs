@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class BackgroundScroll : MonoBehaviour
@@ -13,6 +12,6 @@ public class BackgroundScroll : MonoBehaviour
 
     void Update()
     {
-        meshRenderer.material.mainTextureOffset += new Vector2(scrollSpeed * Time.deltaTime, 0);
+        meshRenderer.material.mainTextureOffset += new Vector2((scrollSpeed * GameManager.instance.CalculateGameSpeed()) * Time.deltaTime, 0);
     }
 }

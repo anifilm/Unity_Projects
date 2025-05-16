@@ -287,8 +287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 215287077}
-  spawnInterval: 3
-  spawnRange: 5
+  spawnInterval: 4
+  spawnRange: 8
   prefabsToSpawn:
   - {fileID: 6428816295351276339, guid: 704693875aeae46c7a6151d23059895f, type: 3}
   - {fileID: 6428816295351276339, guid: 5dc78c28572924e3a87fe089f494da17, type: 3}
@@ -303,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 215287075}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 0}
+  m_LocalPosition: {x: 20, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -353,7 +353,7 @@ Transform:
   m_GameObject: {fileID: 259661086}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: -2.699052, z: 0}
+  m_LocalPosition: {x: 16, y: -2.699052, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1467,13 +1467,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmClip: {fileID: 8300000, guid: a7bd378192d0a473ea2e671db22cb09a, type: 3}
-  bgmVolume: 0.1
+  bgmVolume: 0.2
   sfxClips:
   - {fileID: 8300000, guid: eb2f32bdb088d42a2b26ed9faef9af09, type: 3}
   - {fileID: 8300000, guid: 3a87e1a5d19ff468fae0181573c5424d, type: 3}
   - {fileID: 8300000, guid: 9ab1a4731e0884c1a941ee4f843a665d, type: 3}
   - {fileID: 8300000, guid: aaf6ffa3af3fa4437bbad86a2d6f84d1, type: 3}
-  - {fileID: 8300000, guid: 834ca251e3c754650a8b6c9a200bb28d, type: 3}
+  - {fileID: 8300000, guid: f471aa431de8644d68cf6469ea7caec8, type: 3}
   - {fileID: 8300000, guid: 4d102a4f7480243f4850d01140cd7418, type: 3}
   sfxVolume: 0.2
   channels: 16
@@ -1920,8 +1920,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1878820510}
-  spawnInterval: 2
-  spawnRange: 2
+  spawnInterval: 1.5
+  spawnRange: 3
   prefabsToSpawn:
   - {fileID: 2060750491809564255, guid: 4a2b2c9436aa04e7cbd610fa25b7b2de, type: 3}
   - {fileID: 2060750491809564255, guid: 7f62784c62adb4675b2fecad4af134cd, type: 3}
@@ -1937,7 +1937,7 @@ Transform:
   m_GameObject: {fileID: 1878820508}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -2.24, z: 0}
+  m_LocalPosition: {x: 12, y: -2.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

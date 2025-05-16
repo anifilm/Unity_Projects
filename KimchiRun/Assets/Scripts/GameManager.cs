@@ -1,8 +1,5 @@
-using Unity.VisualScripting;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
 public enum GameState
 {
@@ -120,6 +117,7 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefs.GetInt("HighScore") < score)
         {
             PlayerPrefs.SetInt("HighScore", score);
+            PlayerPrefs.Save();
         }
         scoreUI.GetComponent<UnityEngine.UI.Text>().text = "High Score: " + score.ToString();
     }
@@ -148,6 +146,17 @@ public class GameManager : MonoBehaviour
         FoodSpawner.SetActive(false);
         Player.GetComponent<Player>().ResetPlayer();
         Player.SetActive(true);
+    }
+
+    public float CalculateGameSpeed()
+    {
+        if (gameState != GameState.Playing)
+        {
+            return 1f;
+        }
+
+        float speed = 1f + (0.1f * Mathf.Floor(score / 10f));
+        return Mathf.Min(speed, 10f);
     }
 
     void PlayBgm()

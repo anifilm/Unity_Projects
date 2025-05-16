@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
 
     public void OnEnable()
     {
-        InvokeRepeating(nameof(Spawn), spawnInterval, spawnInterval);
+        InvokeRepeating(nameof(Spawn), spawnInterval - 1f, spawnInterval);
     }
 
     public void OnDisable()
