@@ -16,6 +16,7 @@
 *.sln
 /ProjectSettings/
 /UserSettings/
-/_Layout_/
+/_[Ll]ayout_/
+/_[Bb]ooks_/
 /builtin_shaders-2021.3.39f1/
 .DS_Store
