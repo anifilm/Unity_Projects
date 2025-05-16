@@ -1308,7 +1308,10 @@ MonoBehaviour:
   pipeMin: -0.5
   pipeMax: 1
   pipePrefab: {fileID: 7819526187819260985, guid: db8177164be226d4a946ab1efdbb81c3, type: 3}
+  score: 0
+  bestScore: 0
   ScoreText: {fileID: 984618262}
+  playerDie: 0
   startPanel: {fileID: 2133485925}
   player: {fileID: 431353302}
 --- !u!4 &1073562702
@@ -1831,13 +1834,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmClip: {fileID: 8300000, guid: 0dff026b57957416180aa1f08ced5114, type: 3}
-  bgmVolume: 0.5
+  bgmVolume: 0.1
   sfxClips:
   - {fileID: 8300000, guid: 21e2f5bc26663437d879a6c5a8aeb048, type: 3}
   - {fileID: 8300000, guid: 0085686c49e144761bca6830e7b3e6f5, type: 3}
   - {fileID: 8300000, guid: 36553001076d34f2295eecc62906adf4, type: 3}
   - {fileID: 8300000, guid: a96420a950c29461597597a896e18cab, type: 3}
-  sfxVolume: 0.2
+  sfxVolume: 0.3
   channels: 16
 --- !u!1 &1610095055
 GameObject:
