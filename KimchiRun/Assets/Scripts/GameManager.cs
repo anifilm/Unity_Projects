@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", score);
             PlayerPrefs.Save();
         }
-        scoreUI.GetComponent<UnityEngine.UI.Text>().text = "High Score: " + score.ToString();
+        scoreUI.GetComponent<UnityEngine.UI.Text>().text = "High Score: " + PlayerPrefs.GetInt("HighScore").ToString();
     }
 
     public void GameOver()
