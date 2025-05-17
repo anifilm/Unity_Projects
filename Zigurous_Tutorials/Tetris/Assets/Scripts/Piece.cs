@@ -47,7 +47,7 @@ public class Piece : MonoBehaviour
 
         lockTime += Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.W))
         {
             Rotate(-1);
         }
@@ -126,7 +126,10 @@ public class Piece : MonoBehaviour
             continue;
         }
 
-        Lock();
+        if (lockTime >= 0.01f)
+        {
+            Lock();
+        }
     }
 
     private void Lock()
