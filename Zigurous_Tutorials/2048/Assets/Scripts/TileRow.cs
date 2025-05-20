@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hello : MonoBehaviour
+public class TileRow : MonoBehaviour
 {
     void Start()
     {
-        Debug.Log("Hello World");
+        
     }
 
     void Update()
     {
-
+        
     }
 }
