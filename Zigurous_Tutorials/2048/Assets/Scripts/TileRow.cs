@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class TileRow : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    public TileCell[] cells { get; private set; }
 
-    void Update()
+    void Awake()
     {
-        
+        cells = GetComponentsInChildren<TileCell>();
     }
 }
