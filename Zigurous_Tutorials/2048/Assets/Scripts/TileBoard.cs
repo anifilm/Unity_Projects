@@ -17,16 +17,27 @@ public class TileBoard : MonoBehaviour
         tiles = new List<Tile>(16);
     }
 
-    void Start()
+    public void ClearBoard()
     {
-        CreateTile();
-        CreateTile();
+        foreach (var cell in grid.cells)
+        {
+            cell.tile = null;
+        }
+
+        foreach (Tile tile in tiles)
+        {
+            Destroy(tile.gameObject);
+        }
+
+        tiles.Clear();
     }
-    private void CreateTile()
+
+    public void CreateTile()
     {
         Tile tile = Instantiate(tilePrefab, grid.transform);
         tile.SetState(tileStates[0]);
         tile.Spawn(grid.GetRandomEmptyCell());
+        StartCoroutine(ScaleUp(tile, 0.6f));
         tiles.Add(tile);
     }
 
@@ -119,6 +130,24 @@ public class TileBoard : MonoBehaviour
         TileState newState = tileStates[index];
 
         b.SetState(newState);
+        StartCoroutine(ScaleUp(b, 1.2f, 0.1f));
+
+        GameManager.instance.IncreaseScore(newState.number);
+    }
+
+    private IEnumerator ScaleUp(Tile tile, float to, float delay = 0f)
+    {
+        yield return new WaitForSeconds(delay);
+
+        float elapsedTime = 0f;
+        float duration = 0.1f;
+
+        while (elapsedTime < duration)
+        {
+            tile.transform.localScale = Vector3.Lerp(Vector3.one * to, Vector3.one, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
     }
 
     private int IndexOf(TileState state)
@@ -151,6 +180,47 @@ public class TileBoard : MonoBehaviour
             CreateTile();
         }
 
-        // TODO: Check for game over
+        if (CheckForGameOver())
+        {
+            GameManager.instance.GameOver();
+        }
+    }
+
+    private bool CheckForGameOver()
+    {
+        if (tiles.Count != grid.Size)
+        {
+            return false;
+        }
+
+        foreach (Tile tile in tiles)
+        {
+            TileCell up = grid.GetAdjacentCell(tile.cell, Vector2Int.up);
+            TileCell down = grid.GetAdjacentCell(tile.cell, Vector2Int.down);
+            TileCell left = grid.GetAdjacentCell(tile.cell, Vector2Int.left);
+            TileCell right = grid.GetAdjacentCell(tile.cell, Vector2Int.right);
+
+            if (up != null && CanMerge(tile, up.tile))
+            {
+                return false;
+            }
+
+            if (down != null && CanMerge(tile, down.tile))
+            {
+                return false;
+            }
+
+            if (left != null && CanMerge(tile, left.tile))
+            {
+                return false;
+            }
+
+            if (right != null && CanMerge(tile, right.tile))
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

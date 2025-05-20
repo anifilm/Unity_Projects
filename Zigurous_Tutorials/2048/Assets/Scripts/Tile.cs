@@ -38,6 +38,7 @@ public class Tile : MonoBehaviour
         this.cell = cell;
         this.cell.tile = this;
 
+        transform.localScale = Vector3.zero;
         transform.position = cell.transform.position;
     }
 
@@ -71,7 +72,6 @@ public class Tile : MonoBehaviour
     {
         float elapsedTime = 0f;
         float duration = 0.1f;
-
         Vector3 from = transform.position;
 
         while (elapsedTime < duration)
