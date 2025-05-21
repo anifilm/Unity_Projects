@@ -1,16 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Cell : MonoBehaviour
+public struct Cell
 {
-    void Start()
+    public enum Type
     {
-        
+        Invalid,
+        Empty,
+        Mine,
+        Number,
     }
 
-    void Update()
-    {
-        
-    }
+    public Vector3Int position;
+    public Type type;
+    public int number;
+    public bool isRevealed;
+    public bool isFlagged;
+    public bool isExploded;
 }
