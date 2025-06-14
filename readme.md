@@ -38,6 +38,9 @@
 
 [Unity_Tutorials]
 - Flappy Bird
+- HelloUnity
+- KimchiRun
+  + 노마드코더 - https://youtu.be/A58_FWqiekI - YouTube
 - Study Junior P
 
 
