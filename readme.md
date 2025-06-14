@@ -6,13 +6,6 @@
 - Scripts/ AddSkinnedMeshParts.cs
 
 
-[My project for URP]
-- Icon Effects Pack
-- ParticleImage
-- Shader Graph/ Tutorial Study
-  + 홍마루 - 디자이너도 쉽게! Shader Graph - YouTube
-
-
 [My URP project]
 - GameDev Essential Kit - Mannequin
 - Human Melee Animations
@@ -24,6 +17,13 @@
 [UI Particle Image]
 - ParticleImage
 - URP Template
+
+
+[Unity Shader Graph]
+- Icon Effects Pack
+- ParticleImage
+- Shader Graph/ Tutorial Study
+  + 홍마루 - 디자이너도 쉽게! Shader Graph - YouTube
 
 
 [Unity VFX Graph]
