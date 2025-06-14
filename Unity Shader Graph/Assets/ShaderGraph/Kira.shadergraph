@@ -517,7 +517,7 @@
         },
         "preventRotation": false
     },
-    "m_Path": "Shader Graphs",
+    "m_Path": "Shader Graphs/URP",
     "m_GraphPrecision": 1,
     "m_PreviewMode": 2,
     "m_OutputNode": {
@@ -1109,7 +1109,7 @@
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
-    "m_RenderFace": 2,
+    "m_RenderFace": 0,
     "m_AlphaClip": true,
     "m_CastShadows": true,
     "m_ReceiveShadows": true,
@@ -3165,7 +3165,7 @@
     "m_Title": "VoronoiKira",
     "m_Position": {
         "x": -2727.333251953125,
-        "y": -346.6666564941406
+        "y": -346.6667175292969
     }
 }
 
@@ -3176,7 +3176,7 @@
     "m_Title": "BGKira",
     "m_Position": {
         "x": -3523.333251953125,
-        "y": 150.66671752929688
+        "y": 150.6666259765625
     }
 }
 

@@ -514,7 +514,7 @@
         },
         "preventRotation": true
     },
-    "m_Path": "Shader Graphs",
+    "m_Path": "Shader Graphs/URP",
     "m_GraphPrecision": 1,
     "m_PreviewMode": 2,
     "m_OutputNode": {
@@ -582,7 +582,7 @@
     "m_ObjectId": "01277cafba2d47a4836ea5b2a8f08752",
     "m_Title": "Color",
     "m_Position": {
-        "x": -1334.0,
+        "x": -1333.9998779296875,
         "y": -884.0000610351563
     }
 }
@@ -1555,8 +1555,8 @@
     "m_ObjectId": "40787bb89f2447159f899d50dfc9c09c",
     "m_Title": "Rotate",
     "m_Position": {
-        "x": -2356.666748046875,
-        "y": -864.6666870117188
+        "x": -2356.66650390625,
+        "y": -864.6666259765625
     }
 }
 
@@ -1566,8 +1566,8 @@
     "m_ObjectId": "40a386e82ff34be79a3e13e2c73978fb",
     "m_Title": "Alpha",
     "m_Position": {
-        "x": -966.6666870117188,
-        "y": 292.0001220703125
+        "x": -966.6666259765625,
+        "y": 292.0000305175781
     }
 }
 
@@ -2892,8 +2892,8 @@
     "m_ObjectId": "a8a970f70da3431d8988257beb3395ca",
     "m_Title": "Rectangle",
     "m_Position": {
-        "x": -2340.0,
-        "y": -210.66668701171876
+        "x": -2339.999755859375,
+        "y": -210.66683959960938
     }
 }
 
