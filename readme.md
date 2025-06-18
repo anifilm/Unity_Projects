@@ -8,10 +8,12 @@
 
 [My URP project]
 - GameDev Essential Kit - Mannequin
+- CombatGirls CharacterPack
 - Human Melee Animations
 - Humanoid Mannequins
 - VFXSampleScene/ SmokeEffect (VFX)
 - UnityTechnologies/ ParticlePack
+- Frank RPG (Animation Pack)
 
 
 [UI Particle Image]
