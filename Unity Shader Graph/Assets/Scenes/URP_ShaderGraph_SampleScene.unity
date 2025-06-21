@@ -479,7 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365118521}
   m_Layer: 0
-  m_Name: URPShaerGraphObjects
+  m_Name: URPShaderGraphObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
