@@ -24,6 +24,8 @@
 [Unity Shader Graph]
 - Icon Effects Pack
 - ParticleImage
+- Shader Basic
+  + 아티스트를 위한 유니티 URP 쉐이더 입문
 - Shader Graph/ Tutorial Study
   + 홍마루 - 디자이너도 쉽게! Shader Graph - YouTube
   + 대마왕 - 유니티 URP 셰이더 그래프 스타트업
