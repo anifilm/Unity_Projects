@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CustomUnlit
-  m_Shader: {fileID: 4800000, guid: d0df0078232982543882b6f64f3f4642, type: 3}
+  m_Name: Lambert
+  m_Shader: {fileID: 4800000, guid: c5de96b22a34d054fb05aa68d3a60b6c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -125,7 +125,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.76383865, b: 0, a: 1}
+    - _BaseColor: {r: 1, g: 0.94154644, b: 0.75157225, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
